@@ -14,7 +14,7 @@ It connects to any of the four **I2C ports (Bus 0–3)** on the REV Control Hub 
 
 It supports two I2C clock speeds: **Standard mode at 100 kHz** and High Speed mode at 400 kHz. The FTC SDK configures the bus at 100 kHz by default, which means each I2C transaction takes about **10 µs per bit** — reading all five color/proximity registers across multiple sequential byte transfers can take **several milliseconds per full read cycle**. 
 
-As a result, you should avoid calling `sensor.getNormalizedColors()` or similar SDK methods on every loop iteration without accounting for this delay. 
+As a result, you should avoid calling `sensor.getNormalizedColors()` or similar SDK methods too often without accounting for this delay. 
 
 * Call `sensor.getNormalizedColors()` **once per loop** and store the result in a variable — don't call it multiple times per iteration (this is the spirit of the bulk read advice, applied manually).
 * The FTC SDK handles I2C transactions on a background thread, so reads are non-blocking, but the data is only as fresh as the last completed transaction (~a few ms at 100 kHz).
@@ -46,7 +46,7 @@ Approximate hue ranges for common FTC game element colors. The 0°–360° colum
 
 **Pure / high-saturation colors:**
 
-| Color | Hue range (0–255) | Hue range (0°–360°) | Notes |
+| Color | Hue range in FTC SDK (0–255) | Hue range (0°–360°) | Notes |
 |---|---|---|---|
 | Red | 251–255 or 0–7 | 355°–360° or 0°–10° | Wraps around the 0°/360° boundary |
 | Yellow | 36–43 | 51°–60° | Centered around 60° |
@@ -54,7 +54,7 @@ Approximate hue ranges for common FTC game element colors. The 0°–360° colum
 
 **Broader "tone" ranges** (include shades and adjacent colors):
 
-| Color tone | Hue range (0–255) | Hue range (0°–360°) |
+| Color tone | Hue range in FTC SDK (0–255) | Hue range (0°–360°) |
 |---|---|---|
 | Red tones | 234–255 or 0–21 | 330°–360° or 0°–30° |
 | Yellow tones (incl. orange) | 21–64 | 30°–90° |
