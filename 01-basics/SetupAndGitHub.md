@@ -63,7 +63,7 @@ Now your project is connected to both your GitHub remote repository and the offi
 
 ## Install FTC Dashboard
 
-1. Follow the [FTC Dashboard Getting Started guide](https://acmerobotics.github.io/ftc-dashboard/gettingstarted).
+1. Check the [FTC Dashboard Getting Started guide](https://acmerobotics.github.io/ftc-dashboard/gettingstarted).
    Follow the **Basic** sections and ControlHub instructions to edit and connect to the control hub.
 
 2. *(Already done for the Training 2025 project)* Copy and test this camera program using FTC Dashboard:
@@ -91,9 +91,9 @@ Now your project is connected to both your GitHub remote repository and the offi
 ### Android Studio Steps
 
 1. **Git -> New Branch** -> Enter the task name `T` (consider including your name).
-2. Copy the three programs below from `FTCRobotController/java/org.firstinspires.ftc.robotcontroller/external.samples`:
-   - Paste to `TeamCode/java/org.firstinspires.ftc.teamcode`
-   - Click **Add** & **OK**
+2. Download the three programs below from [FTCRobotController](https://github.com/FIRST-Tech-Challenge/FtcRobotController/tree/master/FtcRobotController/src/main/java/org/firstinspires/ftc/robotcontroller/external/samples) `FTCRobotController/java/org.firstinspires.ftc.robotcontroller/external.samples`:
+   - Paste to the local folder `TeamCode/java/org.firstinspires.ftc.teamcode`
+   - In Android Studio, click **Add** & **OK**
 
 ### Sample Programs from FTCRobotController
 
