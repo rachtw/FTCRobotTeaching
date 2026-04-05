@@ -16,17 +16,16 @@ Then log in to the GitHub website.
 
 ### Fixing "Android SDK Not Found"
 
-1. [Set up the Android 14 SDK](https://developer.android.com/about/versions/14/setup-sdk)
+1. Follow [Set up the Android 14 SDK](https://developer.android.com/about/versions/14/setup-sdk)
 2. If there is still a problem when compiling (**Build -> Make Project**), choose the first SDK from the prompt, then choose **Try Again** from the second prompt.
 
 ---
 
-## (For Owner) Create a Project from Scratch Using FTC Robot Controller Sample Code
-### i.e., Fork the FTC GitHub Repository
+## Create a Team GitGub Repository (by Team Account Holder)
 
-> **Warning:** Make sure your GitHub folder is **not** in a OneDrive folder — we need to edit it offline.
+> **Warning:** Make sure your GitHub folder is **not** stored in a Microsoft OneDrive folder — we need to edit it offline.
 
-### GitHub Steps
+### Fork the FTC FtcRobotController Repository (GitHub Steps)
 
 1. Go to FTC's GitHub website:
    [https://github.com/FIRST-Tech-Challenge/FtcRobotController](https://github.com/FIRST-Tech-Challenge/FtcRobotController)
@@ -38,16 +37,16 @@ Then log in to the GitHub website.
 
 Now your project is connected to both your GitHub remote repository and the official FtcRobotController remote repository.
 
-### Getting Updates from the Official FtcRobotController Library (Android Studio)
+### Get Updates from the FTC FtcRobotController Repository (Android Studio Steps)
 
 1. Checkout the `main` branch.
 2. Choose **FtcRobotController…master -> master…origin/master -> update**.
 
 ---
 
-## (First Time) Download Team Programs from GitHub
+## Download Team GitHub Repository (by Team Members)
 
-> **Warning:** Make sure your GitHub folder is **not** in a OneDrive folder — we need to edit it offline.
+> **Warning:** Make sure your GitHub folder is **not** stored in a Microsoft OneDrive folder — we need to edit it offline.
 
 ### GitHub Steps
 
@@ -76,7 +75,7 @@ Now your project is connected to both your GitHub remote repository and the offi
 
 ---
 
-## Option A: Create Your Own Branch of Team Code
+## Option A: Download the Team Code
 
 ### Android Studio Steps
 
@@ -87,7 +86,7 @@ Now your project is connected to both your GitHub remote repository and the offi
 
 ---
 
-## Option B: Create Your Own Code from Sample Programs
+## Option B: Create Your Own Code from the Sample Programs
 
 ### Android Studio Steps
 
@@ -96,9 +95,8 @@ Now your project is connected to both your GitHub remote repository and the offi
    - Paste to `TeamCode/java/org.firstinspires.ftc.teamcode`
    - Click **Add** & **OK**
 
-### Sample Programs to Copy
+### Sample Programs from FTCRobotController
 
-> The Driver Station app on the Driver Hub can store groups of programs and provides two menus (TeleOp or Autonomous) to choose from. The master structure of a TeleOp program is a loop that takes gamepad input at each iteration and moves the robot. See *"02 Program Servos & Motors"* for details.
 
 - [ ] **BasicOpMode_Linear.java**
   1. Structured sequentially.
@@ -120,6 +118,16 @@ Now your project is connected to both your GitHub remote repository and the offi
 
 ---
 
+## Locally Commit the Program
+
+### Android Studio Steps
+
+1. **Git -> Commit**
+2. On the left side, record what you have modified.
+3. Click **Commit** *(not "Commit and Push" — we don't want to overwrite others' programs).*
+
+---
+
 ## Test the Program on the Robot
 
 ### Android Studio Steps
@@ -138,19 +146,12 @@ Now your project is connected to both your GitHub remote repository and the offi
 3. Edit and activate the **"ChannelDrivetrain"** (or other) configuration.
 4. Choose a TeleOp program to run.
 
----
-
-## Locally Commit the Program
-
-### Android Studio Steps
-
-1. **Git -> Commit**
-2. On the left side, record what you have modified.
-3. Click **Commit** *(not "Commit and Push" — we don't want to overwrite others' programs).*
+> The Driver Station app on the Driver Hub can store groups of programs and provides two menus (TeleOp or Autonomous) to choose from. The master structure of a TeleOp program is a loop that takes gamepad input at each iteration and moves the robot. See *"02 Program Servos & Motors"* for details.
 
 ---
 
-## Rebase with the Latest Program from Remote GitHub (Before Uploading)
+## Rebase with the Latest Remote Repository
+before uploading the program
 
 ### Android Studio Steps
 
@@ -178,15 +179,15 @@ Now you can upload your code.
 
 ### Android Studio Steps
 
-**To upload to the remote `T` branch:**
+**Option A: Upload to the remote `T` branch:**
 1. *(Assume you already committed your code on branch `T`.)*
 2. **Git -> Push**
 3. Choose the remote `T` branch.
 
-**To push to the `master` branch** *(only after the program is tested!)*:
+**Option B: Push to the `master` branch** 
+*(only after the program is tested by the team!)*:
 
 If the remote `master` branch has been updated by others after you rebased:
-
 1. *(Assume you already committed and rebased branch `T` with the latest `master`.)*
 2. Checkout the `master` branch at the top.
 3. **Git -> Merge**, choose `T`.
@@ -197,7 +198,7 @@ If merging fails:
 3. Solve conflicts in the code.
 4. Go back to step 1 of merging.
 
-To upload to master:
+Upload to master:
 1. Checkout the `master` branch at the top.
 2. **Git -> Push**
 
@@ -208,15 +209,18 @@ If the remote `master` branch is unlikely to have been updated after you rebased
 
 ---
 
-## Troubleshooting: Push Is Denied in Android Studio
+### Troubleshooting: Push Is Denied in Android Studio
 
-- **If you cannot push using GitHub Desktop:** Make sure the owner has added your account to the repository with **Write** access, and that you have accepted the invite.
-- **If you can push using GitHub Desktop but not Android Studio:** Follow the instructions at [Stack Overflow: Can't log in to GitHub on Android Studio](https://stackoverflow.com/questions/64869735/cant-log-in-to-github-on-android-studio).
-- If that doesn't work, check out the Windows Credential Manager or Git Bash & SSH key methods.
+**If you cannot push using GitHub Desktop:** 
+Make sure the owner has added your account to the repository with **Write** access, and that you have accepted the invite.
+
+**If you can push using GitHub Desktop but not Android Studio:** 
+1. Follow the instructions at [Stack Overflow: Can't log in to GitHub on Android Studio](https://stackoverflow.com/questions/64869735/cant-log-in-to-github-on-android-studio).
+2. If that doesn't work, check out the Windows Credential Manager or Git Bash & SSH key methods.
 
 ---
 
-## Use Git Bash Instead (Optional)
+## Use Git Bash Instead of GitHub (Optional)
 
 ### Git Commit Procedure
 
