@@ -8,9 +8,9 @@ This document is a concise step-by-step note. The complete tutorial can be found
 
 To run the FTC code, install the following:
 
-1. GitHub Desktop (Git Bash)
-2. Android Studio
-3. REV Hardware Client
+* GitHub Desktop (Git Bash)
+* Android Studio
+* REV Hardware Client
 
 Then log in to the GitHub website.
 
@@ -50,7 +50,7 @@ Now your project is connected to both your GitHub remote repository and the offi
 
 ### GitHub Steps
 
-1. Accept the invitation (check your inbox).
+1. Accept the Repository invitation (check your GitHub inbox).
 2. Go to our GitHub repositories:
    - [https://github.com/duckyduckies/INTOTHEDEEP/](https://github.com/duckyduckies/INTOTHEDEEP/)
    - [https://github.com/duckyduckies/Training/](https://github.com/duckyduckies/Training/)
@@ -207,7 +207,6 @@ If the remote `master` branch is unlikely to have been updated after you rebased
 2. **Git -> Push**
 3. Choose the remote `origin/master` branch.
 
----
 
 ### Troubleshooting: Push Is Denied in Android Studio
 
